@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Shayon!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .cake {
+      width: 220px;
+      height: 220px;
+      margin: 30px auto;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .cake:hover {
+      transform: scale(1.05);
+    }
+    .message {
+      font-size: 1.4rem;
+      max-width: 600px;
+      margin: 20px auto;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .show {
+      opacity: 1;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .message {
+        font-size: 1.1rem;
+        padding: 0 10px;
+      }
+      .cake {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Happy Birthday SHAYON!</h1>
+  <div class="cake" id="cakeLit" style="background-image: url('cake-lit.png');"></div>
+  <div class="cake" id="cakeOut" style="background-image: url('cake-blown.png'); display: none;"></div>
+  <div class="message" id="msg1">You've been my friend even in my worst times. I can't give you a huge gift, but I’ll always give you all I have.</div>
+  <div class="message" id="msg2">We've dreamed of success together — and we will fulfill that dream.</div>
+  <div class="message" id="msg3">You're stepping into a new age with new skills and wisdom. Congratulations!</div>
+  <div class="message" id="msg4">Chal ab party de 😂</div>  <script>
+    const litCake = document.getElementById('cakeLit');
+    const blownCake = document.getElementById('cakeOut');
+    const title = document.getElementById('title');
+    const messages = [
+      document.getElementById('msg1'),
+      document.getElementById('msg2'),
+      document.getElementById('msg3'),
+      document.getElementById('msg4')
+    ];
+
+    let step = 0;
+    let messageMode = false;
+
+    litCake.addEventListener('click', () => {
+      litCake.style.display = 'none';
+      blownCake.style.display = 'block';
+      messageMode = true;
+    });
+
+    document.body.addEventListener('click', () => {
+      if (!messageMode || step >= messages.length) return;
+
+      if (step > 0) messages[step - 1].classList.remove('show');
+      messages[step].classList.add('show');
+      step++;
+    });
+  </script></body>
+</html
