@@ -1,214 +1,96 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gourav's Philosophy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gourav ❤️ Pragya</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+  <!-- Framer Motion -->
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+
+  <!-- React + ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
   <style>
     body {
-      background-color: #121212;
-      color: #e0e0e0;
-      font-family: 'Courier New', Courier, monospace;
-      padding: 20px;
+      background: linear-gradient(135deg, #ffe4e6, #fad0c4);
+      overflow: hidden;
+      font-family: 'Pacifico', cursive;
     }
-
-    h1 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 5px;
-      color: #ffcc00;
+    .heart {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.8;
     }
-
-    h3 {
-      text-align: center;
-      font-size: 18px;
-      margin-top: 0;
-      color: #bbbbbb;
-    }
-
-    pre {
-      background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 8px;
-      overflow-x: auto;
-      box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
-      line-height: 1.5;
-    }
-
-    .hidden-meaning {
-      margin-top: 20px;
-      background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
-      display: none;
-    }
-
-    .hidden-meaning h2 {
-      color: #ffcc00;
-      text-align: center;
-    }
-
-    .hidden-meaning p {
-      line-height: 1.6;
-    }
-
-    .toggle-button {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #ffcc00;
-      color: #121212;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s;
-    }
-
-    .toggle-button:hover {
-      background-color: #e6b800;
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
     }
   </style>
 </head>
+<body class="flex items-center justify-center min-h-screen">
 
-<body>
-
-  <!-- Trapped -->
-  <h1>Trapped</h1>
-  <h3>-by Gourav</h3>
-  <pre>
-Purposes, purposes  
-Don’t forget me,  
-I create my purposes  
-From the empty life of me.  
-
-No one got their purposes  
-At the time they were born.  
-Some die, still questioning,  
-Some finds, changes the world.  
-
-Am I The Best?  
-Narcissism asked.  
-Truth knocks door,  
-The Lad ignored.  
-
-Delusion trapped him,  
-He died in silence.  
-No traces left,  
-Nor greatness.  
-
-Freedom is peace,  
-Many think.  
-Freedom is choices,  
-Hard to make.  
-
-Freedom is loneliness  
-You cannot take.  
-
-Knowledge scares me,  
-Constant comparison.  
-I die from inside—  
-This quiet competition.  
-
-Everything compared  
-By this world.  
-None knew knowledge,  
-But spitted it all.  
-
-Myself asks me,  
-"Why am I loser?"  
-Narcissism replies,  
-"I’m The Best loser."  
-
-Nihilism says,  
-"Is it all real?"  
-Myself tired of  
-Constant comparison.  
-
-"Fake everyone"  
-Nihilist said.  
-Soft me thinks  
-The statement’s fake.  
-
-Everyone left me,  
-I’m so alone.  
-Myself beside me,  
-Personality of all.  
-
-Life is consequences,  
-One wrong move.  
-Knowledge is curse—  
-How to prove?  
-
-I chose wrong path,  
-"Correcting myself,"  
-That pothole  
-Which Killed myself.  
-
-Myself asks quietly,  
-"Am I broken? Am I ill?"  
-Thoughts too loud,  
-Mind never still.  
-
-Words died.  
-Can’t confess.  
-Nothing to say much.  
-Hurted myself.
-  </pre>
-
-  <button class="toggle-button" onclick="toggleMeaning('meaning1')">Show Hidden Meaning</button>
-  <div class="hidden-meaning" id="meaning1">
-    <h2>Hidden Meaning</h2>
-    <p>
-      This poem is not just about life or sadness. It's about the quiet destruction caused by constant comparison, by the pressure to be "the best," by a system that demands purpose when purpose doesn't naturally exist.<br><br>
-      The voices in the poem—narcissism, nihilism, self-doubt—are all parts of the poet himself, fighting for control in an overthinking mind that refuses to rest. The poet questions if knowledge itself is a curse; the more he learns, the heavier life becomes, the more trapped he feels.<br><br>
-      It's also a message to the world: The system tried to break a mind like his. It wanted him to fit in, to compete, to suffer quietly. But instead, he wrote this. And by writing, he survived. His thoughts are now immortal, living in this poem, on this page.<br><br>
-      The poem ends not with an answer, but with exhausted silence. Like Schrödinger’s cat—he is both broken and whole, dead and alive, trapped and free. And that, too, is his truth.
-    </p>
-  </div>
-
-  <!-- False Truth -->
-  <h1>False Truth</h1>
-  <h3>-by Gourav</h3>
-  <pre>
-Life is a myth, seen by eyes  
-The false that you saw  
-Shaped by dice.  
-You can't hear some thoughts  
-Flying in the wind.  
-Evolution shaped you,  
-Limited to life.  
-
-Mind is freedom, thoughts are yours,  
-Revolution thoughts, which changed the world.  
-
-Mind is blunt, limited life.  
-Choices in your hands,  
-Be remembered, or just dies.
-  </pre>
-
-  <button class="toggle-button" onclick="toggleMeaning('meaning2')">Show Hidden Meaning</button>
-  <div class="hidden-meaning" id="meaning2">
-    <h2>Hidden Meaning</h2>
-    <p>
-      Life is just a myth. Some animals can hear and see things humans can't. The “flying thoughts” represent sounds or ideas outside the range of human perception. Humans, though limited biologically, have the mind — and with it, the freedom to imagine, rebel, and create.<br><br>
-      But society and its system blur that freedom. They force conformity and silence the revolutionary thoughts that could change the world. The final lines are a challenge: either rise and break the cycle, or vanish without leaving a mark.<br><br>
-      It’s a call to wake up, to use the mind not just to survive — but to be remembered.
-    </p>
-  </div>
+  <div id="root"></div>
 
   <script>
-    function toggleMeaning(id) {
-      var x = document.getElementById(id);
-      if (x.style.display === "none" || x.style.display === "") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-  </script>
+    const { motion } = window['framer-motion'];
+    const e = React.createElement;
 
+    function App() {
+      return (
+        e("div", { className: "relative flex flex-col items-center" },
+          e(motion.h1, {
+            initial: { scale: 0 },
+            animate: { scale: 1 },
+            transition: { duration: 1.5, ease: "easeOut" },
+            className: "text-5xl text-pink-600 drop-shadow-lg"
+          }, "Gourav ❤️ Pragya"),
+
+          // 20 floating hearts
+          [...Array(20)].map((_, i) =>
+            e("div", {
+              key: i,
+              className: "heart",
+              style: {
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}vh`,
+                animationDelay: `${Math.random() * 5}s`,
+                color: ["#f472b6", "#fb7185", "#f9a8d4"][Math.floor(Math.random() * 3)]
+              }
+            }, 
+              e("svg", { viewBox: "0 0 24 24", fill: "currentColor" },
+                e("path", {
+                  d: "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 
+                  3.41 1.01 4.22 2.61C11.09 5.01 12.76 4 14.5 
+                  4 17 4 19 6 19 8.5c0 3.78-3.4 6.86-8.55 
+                  11.54L12 21.35z"
+                })
+              )
+            )
+          )
+        )
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(e(App));
+  </script>
 </body>
 </html>
